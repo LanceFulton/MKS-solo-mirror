@@ -1,0 +1,21 @@
+
+
+
+• on page load
+  • append thought list
+
+• on float button click
+  • detach thought list
+  • append input form and submit button
+
+• on submit button click
+  • create thought with input
+  • sort thought list by votes
+  • detach input form and submit button
+  • append thought list
+
+• on vote up click
+  • increment votes for thought
+  • sort thought list
+  • detach thought list
+  • append thought list
