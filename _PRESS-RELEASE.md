@@ -19,26 +19,44 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
+  FloatUp - A Crowd-sourced Thought Repository
+
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+
+  FloatUp is for all internet users. It offers them inspiration, entertainment, and a way to share and immortalize their thoughts.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
+  Users submit thoughts. Users vote up thoughts they like. Thoughts are displayed sorted by votes. The best thoughts float to the top. Thus, humanity's best thoughts are displayed for all to read.
+
 ## Problem ##
   > Describe the problem your product solves.
+
+  There are billions of people in the world, most of whom are almost always thinking when awake. Even if only a small percentage of thoughts are noteworthy, this would add up to a massive amount of noteworthy thoughts. Most thoughts are neither recorded nor shared. They are simply forgotten. They die, and this is a waste. FloatUp solves this problem by saving and communicating humanity's most important thoughts.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
 
+  At an MVP level, FloatUp is very simple. Users can do 3 things: submit thoughts, read thoughts, and vote up thoughts. Via these three actions, one can ensure that their own good thoughts are not wasted, and can have access to the best thoughts of others.
+
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+
+  FloatUp saves and communicates humanity's best thoughts. Contribute your own thoughts, vote on others' ideas, and see which ones float to the top.
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
+  To get started, visit FloatUp and submit your best thoughts. Then browse thoughts by others and vote up the best. 
+
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
+  "I love logging on to FloatUp every morning for inspiration for my day. I'm always amazed at the creativity and perceptivity that my fellow users have shared."
+
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+
+  Start putting your thoughts to use. Save them, share them, and get inspired. Visit FloatUp.com.
