@@ -24,7 +24,8 @@ $(document).ready(function(){
     .append('<div class="col-md-12" id="ideabox"></div>')
     .append(
       '<span class="col-md-2"></span>',
-      '<span class="col-md-8" id="idea">' + thoughtList[i].text.toString() + '</span>',
+      '<span class="col-md-8" id="idea">' + '<p>' + thoughtList[i].text.toString() + '</p>'
+        + '<a href="" class="votebutton">&#9650 VoteUp</a>' + '<span class="votecount">+302</span>' + '</span>',
       '<span class="col-md-2"></span>'
     );
   }
