@@ -1,3 +1,6 @@
+$('html').css('overflow', 'hidden');
+
+
 var thoughtList = [];
 
 function Thought(text){
@@ -19,9 +22,24 @@ thoughtList.push(new Thought('Change your thoughts and you change your world.'))
 
 thoughtList.push(new Thought('Change your thoughts and you change your world.'));
 
+// var sortList = function(){
+//   thoughtList.sort(function(a,b){
+//     if (a.votes < b.votes){
+//       return 1;
+//     }
+//     if (a.votes > b.votes){
+//       return -1;
+//     }
+//     return 0;
+//   });
+// };
+
 var renderList = function(){
-  $('#ideafield').empty();
+  $('#formfield').remove();
+
+  $('#ideafield').remove();
   $('body').append('<div id="ideafield"></div>');
+  // sortList();
   for (i=0 ; i<thoughtList.length ; i++){
     // append thoughtList
     $('#ideafield')
@@ -65,12 +83,11 @@ var renderForm = function(){
 
 var addThought = function(){
   thoughtList.push(new Thought( $('#thoughtinput').val() ) );
-  $('#formfield').remove();
   renderList();
 }
 
 $(document).ready(function(){
-  
+
   renderList();
 
   $('.navbarbutton').bind("click", function(event){
