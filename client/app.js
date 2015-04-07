@@ -15,9 +15,14 @@ thoughtList.push(new Thought('There are more living organisms in a teaspoon of s
 
 thoughtList.push(new Thought('Change your thoughts and you change your world.'));
 
+thoughtList.push(new Thought('Change your thoughts and you change your world.'));
+
+thoughtList.push(new Thought('Change your thoughts and you change your world.'));
+
+
 $(document).ready(function(){
 
-  $('body').append('<div></div>').attr('id', 'ideafield');
+  $('body').append('<div id="ideafield"></div>');
 
   for (i=0 ; i<thoughtList.length ; i++){
     $('#ideafield')
@@ -25,7 +30,7 @@ $(document).ready(function(){
     .append(
       '<span class="col-md-2"></span>',
       '<span class="col-md-8" id="idea">' + '<p>' + thoughtList[i].text.toString() + '</p>'
-        + '<a href="" class="votebutton">&#9650 VoteUp</a>' + '<span class="votecount">+302</span>' + '</span>',
+        + '<a href="" class="votebutton">&#9650 VoteUp</a>' + '<span class="votecount">+' + thoughtList[i].votes + '</span>' + '</span>',
       '<span class="col-md-2"></span>'
     );
   }
