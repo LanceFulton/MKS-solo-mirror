@@ -17,18 +17,17 @@ thoughtList.push(new Thought('Change your thoughts and you change your world.'))
 
 $(document).ready(function(){
 
-  $('body').append('<div></div>').attr('id', 'ideafield')
+  $('body').append('<div></div>').attr('id', 'ideafield');
 
   for (i=0 ; i<thoughtList.length ; i++){
     $('#ideafield')
-    .append('<div></div>').addClass('col-md-12', 'ideabox')
-    .append('<span></span>').addClass('col-md-2')
-
+    .append('<div class="col-md-12" id="ideabox"></div>')
+    .append(
+      '<span class="col-md-2"></span>',
+      '<span class="col-md-8" id="idea">' + thoughtList[i].text.toString() + '</span>',
+      '<span class="col-md-2"></span>'
+    );
   }
-
-    // $('#ideafield').append('<div>' + thoughtList[i].text.toString() + '</div>');
-
-
 })
 
 
@@ -36,10 +35,10 @@ $(document).ready(function(){
 
 /*
 
-*    <div id="ideafield">
+    <div id="ideafield">
 
-*      <div class="col-md-12" id="ideabox">
-*        <span class="col-md-2"></span>
+      <div class="col-md-12" id="ideabox">
+        <span class="col-md-2"></span>
         <span class="col-md-8" id="idea">
           <p>When you look into the night sky, you are looking back in time.</p>
           <a href="" class="votebutton"> &#9650 VoteUp</a><span class="votecount">+302</span>
