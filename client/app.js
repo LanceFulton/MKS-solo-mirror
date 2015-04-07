@@ -21,6 +21,7 @@ thoughtList.push(new Thought('Change your thoughts and you change your world.'))
 
 var renderList = function(){
   $('#ideafield').empty();
+  $('body').append('<div id="ideafield"></div>');
   for (i=0 ; i<thoughtList.length ; i++){
     // append thoughtList
     $('#ideafield')
@@ -34,7 +35,6 @@ var renderList = function(){
     // bind voteUp buttons
     $('#' + i).bind( "click" , {id:i}, function(event){
       event.preventDefault();
-      console.log('INCREMENT');
       thoughtList[event.data.id].votes++;
       renderList();
     } )
@@ -43,14 +43,15 @@ var renderList = function(){
 
 var renderForm = function(){
   $('#ideafield').remove();
-  $('body').append('<div class="col-md-12" id="formfield"></div>').append(
+  $('body').append('<div class="col-md-12" id="formfield"></div>')
+  $('#formfield').append(
     '<span class="col-md-2"></span>',
     '<span class="col-md-8" id="thoughtfield"></span>',
     '<span class="col-md-2"></span>'
     );
   $('#thoughtfield').append('<textarea type="text" id="thoughtinput">')
 
-  $('body').append('<div class="col-md-12"></div>').append(
+  $('#formfield').append(
     '<span class="col-md-8"></span>',
     '<span class="col-md-1" id="submitfield"></span>',
     '<span class="col-md-3"></span>'
@@ -64,12 +65,12 @@ var renderForm = function(){
 
 var addThought = function(){
   thoughtList.push(new Thought( $('#thoughtinput').val() ) );
-  alert( $('#thoughtinput').val() );
+  $('#formfield').remove();
+  renderList();
 }
 
 $(document).ready(function(){
-  $('body').append('<div id="ideafield"></div>');
-
+  
   renderList();
 
   $('.navbarbutton').bind("click", function(event){
