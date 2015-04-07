@@ -56,26 +56,16 @@ var renderForm = function(){
     '<span class="col-md-3"></span>'
     );
   $('#submitfield').append('<button id="submitbutton"><h2>submit</h2></button>');
+
+  $('#submitbutton').on("click", function(){
+    addThought();
+  })
 };
 
-/*
-  <div class="col-md-12" id="formfield">
-    <span class="col-md-2"></span>
-    <span class="col-md-8">
-      <form id="thoughtform"><input id="thoughtinput"></input></form>
-    </span>
-    <span class="col-md-2"></span>
-  </div>
-
-  <div>
-    <span class="col-md-8"></span>
-    <span class="col-md-1">
-      <button id="submitbutton"><h2>Submit</h2></button>
-    </span>
-    <span class="col-md-3"></span>
-  </div>
-*/
-
+var addThought = function(){
+  thoughtList.push(new Thought( $('#thoughtinput').val() ) );
+  alert( $('#thoughtinput').val() );
+}
 
 $(document).ready(function(){
   $('body').append('<div id="ideafield"></div>');
@@ -88,24 +78,6 @@ $(document).ready(function(){
   })
 
 })
-
-
-
-
-/*
-
-    <div id="ideafield">
-
-      <div class="col-md-12" id="ideabox">
-        <span class="col-md-2"></span>
-        <span class="col-md-8" id="idea">
-          <p>When you look into the night sky, you are looking back in time.</p>
-          <a href="" class="votebutton"> &#9650 VoteUp</a><span class="votecount">+302</span>
-        </span>
-        <span class="col-md-2"></span>
-      </div>
-
-*/
 
 
 
