@@ -22,24 +22,24 @@ thoughtList.push(new Thought('Change your thoughts and you change your world.'))
 
 thoughtList.push(new Thought('Change your thoughts and you change your world.'));
 
-// var sortList = function(){
-//   thoughtList.sort(function(a,b){
-//     if (a.votes < b.votes){
-//       return 1;
-//     }
-//     if (a.votes > b.votes){
-//       return -1;
-//     }
-//     return 0;
-//   });
-// };
+var sortList = function(){
+  thoughtList.sort(function(a,b){
+    if (a.votes < b.votes){
+      return 1;
+    }
+    if (a.votes > b.votes){
+      return -1;
+    }
+    return 0;
+  });
+};
 
 var renderList = function(){
   $('#formfield').remove();
 
   $('#ideafield').remove();
   $('body').append('<div id="ideafield"></div>');
-  // sortList();
+  sortList();
   for (i=0 ; i<thoughtList.length ; i++){
     // append thoughtList
     $('#ideafield')
