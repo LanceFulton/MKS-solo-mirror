@@ -10,15 +10,15 @@ function Thought(text){
 
 thoughtList.push(new Thought('When you look into the night sky, you are looking back in time.'));
 
-thoughtList.push(new Thought('The human brain is the most complex object in the known universe.'));
+thoughtList.push(new Thought("We are like butterflies who flutter for a day and think it's forever."));
 
 thoughtList.push(new Thought("It's better to die on your feet than live on your knees."));
 
 thoughtList.push(new Thought('There are more living organisms in a teaspoon of soil than there are people on Earth.'));
 
-thoughtList.push(new Thought('Change your thoughts and you change your world.'));
+thoughtList.push(new Thought('We can know only that we know nothing. And that is the highest degree of human wisdom.'));
 
-thoughtList.push(new Thought('Change your thoughts and you change your world.'));
+thoughtList.push(new Thought('The human brain is the most complex object in the known universe.'));
 
 thoughtList.push(new Thought('Change your thoughts and you change your world.'));
 
