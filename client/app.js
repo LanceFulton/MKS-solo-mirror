@@ -41,10 +41,36 @@ var renderList = function(){
   }
 }
 
+var renderForm = function(){
+  $('#ideafield').remove();
+  $('#body').append('<div class="col-md-12" id="formfield">')
+  $('#formfield').append(
+    '<span class="col-md-2">hey</span>',
+    '<span class="col-md-8">hey</span>',
+    '<span class="col-md-2">hey</span>'
+    )
+};
+
+/*
+  <div class="col-md-12" id="formfield">
+    <span class="col-md-2"></span>
+    <span class="col-md-8">
+      <form id="thoughtform"><input id="thoughtinput"></input></form>
+    </span>
+    <span class="col-md-2"></span>
+  </div>
+*/
+
+
 $(document).ready(function(){
   $('body').append('<div id="ideafield"></div>');
 
   renderList();
+
+  $('.navbarbutton').bind("click", function(event){
+    event.preventDefault();
+    renderForm();
+  })
 
 })
 

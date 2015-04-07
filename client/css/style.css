@@ -20,6 +20,10 @@ body {
   text-decoration: none;
 }
 
+#navbar a:active {
+  text-decoration: none
+}
+
 h2 {
   font-size: 1.4em;
   margin: 0px;
@@ -31,6 +35,10 @@ h2 {
 
 #navbar h2:hover {
   color: #808080;
+}
+
+#navbar h2:active {
+  text-decoration: none;
 }
 
 #logo1 {
@@ -94,6 +102,10 @@ h2 {
   color: #000000;
 }
 
+.votebutton:active {
+  text-decoration: none;
+}
+
 .votebutton a {
   color: #0099FF;
 }
@@ -130,6 +142,10 @@ h2 {
 #submitbutton h2:hover {
   background-color: #FFF;
   color: #808080;
+}
+
+#submitbutton h2:active {
+  text-decoration: none;
 }
 
 .test {
