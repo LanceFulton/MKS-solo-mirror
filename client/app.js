@@ -19,13 +19,10 @@ thoughtList.push(new Thought('Change your thoughts and you change your world.'))
 
 thoughtList.push(new Thought('Change your thoughts and you change your world.'));
 
-
-$(document).ready(function(){
-
-  $('body').append('<div id="ideafield"></div>');
-
+var renderList = function(){
+  $('#ideafield').empty();
   for (i=0 ; i<thoughtList.length ; i++){
-
+    // append thoughtList
     $('#ideafield')
     .append('<div class="col-md-12" id="ideabox"></div>')
     .append(
@@ -33,16 +30,22 @@ $(document).ready(function(){
       '<span class="col-md-8" id="idea">' + '<p>' + thoughtList[i].text.toString() + '</p>'
         + '<a href="" class="votebutton" id=' + i + '>&#9650 VoteUp</a>' + '<span class="votecount">+' + thoughtList[i].votes + '</span>' + '</span>',
       '<span class="col-md-2"></span>'
-
     );
-
-
+    // bind voteUp buttons
     $('#' + i).bind( "click" , {id:i}, function(event){
       event.preventDefault();
+      console.log('INCREMENT');
       thoughtList[event.data.id].votes++;
+      renderList();
     } )
-
   }
+}
+
+$(document).ready(function(){
+  $('body').append('<div id="ideafield"></div>');
+
+  renderList();
+
 })
 
 
