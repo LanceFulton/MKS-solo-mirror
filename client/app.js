@@ -25,14 +25,23 @@ $(document).ready(function(){
   $('body').append('<div id="ideafield"></div>');
 
   for (i=0 ; i<thoughtList.length ; i++){
+
     $('#ideafield')
     .append('<div class="col-md-12" id="ideabox"></div>')
     .append(
       '<span class="col-md-2"></span>',
       '<span class="col-md-8" id="idea">' + '<p>' + thoughtList[i].text.toString() + '</p>'
-        + '<a href="" class="votebutton">&#9650 VoteUp</a>' + '<span class="votecount">+' + thoughtList[i].votes + '</span>' + '</span>',
+        + '<a href="" class="votebutton" id=' + i + '>&#9650 VoteUp</a>' + '<span class="votecount">+' + thoughtList[i].votes + '</span>' + '</span>',
       '<span class="col-md-2"></span>'
+
     );
+
+
+    $('#' + i).bind( "click" , {id:i}, function(event){
+      event.preventDefault();
+      thoughtList[event.data.id].votes++;
+    } )
+
   }
 })
 
