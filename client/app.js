@@ -43,12 +43,19 @@ var renderList = function(){
 
 var renderForm = function(){
   $('#ideafield').remove();
-  $('#body').append('<div class="col-md-12" id="formfield">')
-  $('#formfield').append(
-    '<span class="col-md-2">hey</span>',
-    '<span class="col-md-8">hey</span>',
-    '<span class="col-md-2">hey</span>'
-    )
+  $('body').append('<div class="col-md-12" id="formfield"></div>').append(
+    '<span class="col-md-2"></span>',
+    '<span class="col-md-8" id="thoughtfield"></span>',
+    '<span class="col-md-2"></span>'
+    );
+  $('#thoughtfield').append('<textarea type="text" id="thoughtinput">')
+
+  $('body').append('<div class="col-md-12"></div>').append(
+    '<span class="col-md-8"></span>',
+    '<span class="col-md-1" id="submitfield"></span>',
+    '<span class="col-md-3"></span>'
+    );
+  $('#submitfield').append('<button id="submitbutton"><h2>submit</h2></button>');
 };
 
 /*
@@ -58,6 +65,14 @@ var renderForm = function(){
       <form id="thoughtform"><input id="thoughtinput"></input></form>
     </span>
     <span class="col-md-2"></span>
+  </div>
+
+  <div>
+    <span class="col-md-8"></span>
+    <span class="col-md-1">
+      <button id="submitbutton"><h2>Submit</h2></button>
+    </span>
+    <span class="col-md-3"></span>
   </div>
 */
 
